@@ -1,4 +1,4 @@
-class Todos  {
+class Todo  {
     constructor (title,description,dueDate,priority,completion = false) {
         
 
@@ -64,9 +64,4 @@ class Todos  {
 }
 
 
-const todo =  new Todos('a','aa','',4)
-
-
-
-console.log(todo)
-export default Todos
+export default Todo
