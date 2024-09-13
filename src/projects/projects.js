@@ -4,7 +4,7 @@
 class Project {
     constructor (title) {
         this.title = title
-        this.todosList = [];
+        this.todosInProject = [];
     }
 
 
@@ -13,11 +13,18 @@ class Project {
     }
 
     addTodo(todo) {
-        this.todosList.push(todo)
+        this.todosInProject.push(todo)
     }
+
+
+    removeTodo(index) {
+        this.todosInProject =  this.todosInProject.filter((todoIn, i) => i !== index)
+      }
+  
 }
 
 
+    
 
 
 

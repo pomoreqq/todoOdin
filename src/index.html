@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PomorengTodo</title>
+    <script src="index.js" type="module" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <h1>pomorengTodo</h1>
+        </header>
+
+        <div class="main-content">
+            <div class="project-list">
+                <h2>Projectlist</h2>
+                <button class="add-project-btn">Add Project</button>
+                <div id="projects"></div>
+            </div>
+
+            <div class="todo-list">
+                <h2>Todolist</h2>
+                <button class="add-todo-btn">Add Todo</button>
+                <div id="todos"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Tu może w przyszłości będą zakładki typu completed, expired, itp</p>
+            <p>Footer</p>
+        </footer>
+    </div>
+
+   
+    <div class="popup" >
+        <div class="popup-content">
+            <button class="close-btn" >&times;</button>
+            <div class="formContainer">
+                <form id="todoForm">
+                    <div>
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                
+                    <div>
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" required></textarea>
+                    </div>
+                
+                    <div>
+                        <label for="dueDate">Due Date:</label>
+                        <input type="date" id="dueDate" name="dueDate" required>
+                    </div>
+                
+                    <div>
+                        <label for="priority">Priority (1-10):</label>
+                        <input type="number" id="priority" name="priority" min="1" max="10" required>
+                    </div>
+                
+                    <div>
+                        <label for="completion">Completion:</label>
+                        <input type="checkbox" id="completion" name="completion">
+                    </div>
+                
+                    <div>
+                        <label for="project">Assign to Project:</label>
+                        <select id="project" name="project">
+                        </select>
+                    </div>
+                
+                    <button type="submit">Submit Todo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
